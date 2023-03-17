@@ -1,5 +1,5 @@
 # PONG
-##  I am sure that we all Have played PONG before.
+##  I am sure that we all have played PONG before.
 #### PONG is a game that was very popular before these console games came out. I remember playing PONG when I was 6 years old. 
 
 
@@ -27,3 +27,8 @@
 ## Tech Being Used
 * Html/CSS
 * JavaScript
+
+## potential roadblocks
+* finding a way to end the game after the score reaches 6
+* getting the ball to render back into the game after someone scores
+* getting the ball to go faster depanding on the score
