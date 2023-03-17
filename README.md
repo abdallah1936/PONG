@@ -28,7 +28,8 @@
 * Html/CSS
 * JavaScript
 
-## potential roadblocks
+## potential Roadblocks
 * finding a way to end the game after the score reaches 6
 * getting the ball to render back into the game after someone scores
 * getting the ball to go faster depanding on the score
+* finding a way to make the ball bounce
