@@ -1,48 +1,51 @@
-const canves = document.getElementById("game")
-const ctx = canves.getContext("2d")
-canves.width = 650;
-canves.height = 400;
+// initialize the canvas and context
+let canvas = document.getElementById("gameCanvas");
+let ctx = canvas.getContext("2d");
 
-let scoreOne = 0
-let scoreTwo = 0
+// set the starting position and size of the ball
+let ballX = canvas.width / 4;
+let ballY = canvas.height / 4;
+let ballRadius = 10;
 
-class Element{
-    constructor(options){
-        this.x = options.x
-        this.y = options.y
-        this.width = options.width
-        this.height = options.height
-        this.color = options.color
-        this.speed = options.x || 2;
-        this.gravity = options.x
-    }
+// set the speed and direction of the ball
+let ballSpeedX =1.5;
+let ballSpeedY = 1.5;
+
+// set the position and size of the paddles
+let paddleHeight = 100;
+let paddleWidth = 10;
+let paddleSpeed = 30;
+let player1Y = (canvas.height - paddleHeight) / 2;
+let player2Y = (canvas.height - paddleHeight) / 2;
+
+// define the score properties
+let player1Score = 0;
+let player2Score = 0;
+let winningScore = 6;
+
+// draw the ball on the canvas
+function drawBall() {
+  ctx.beginPath();
+  ctx.arc(ballX, ballY, ballRadius, 0, Math.PI * 2); // to get the circumferance of the circle and its diameter
+  ctx.fillStyle = "black";
+  ctx.fill();
+  ctx.closePath(); //add a straight line from the current point to the start of the current sub-path.
 }
 
-const playerOne = new Element({
-    x:10,
-    y:200,
-    width:15,
-    height:80,
-    color: "#fff",
-    gravity:2,
-})
-// second paddle 
-const playerTwo = new Element({
-    x:650,
-    y:200,
-    width:15,
-    height:80,
-    color: "#fff",
-    gravity:2,
-})
-// ball
-const ball = new Element({
-    x:650/2,
-    y:400/2,
-    width:15,
-    height:15,
-    color: "white",
-    speed: 1,
-    gravity: 1,
-})
+// draw the paddles on the canvas
+function drawPaddles() {
+  // player 1 paddle
+  ctx.beginPath();
+  ctx.rect(0, player1Y, paddleWidth, paddleHeight);
+  ctx.fillStyle = "black";
+  ctx.fill();
+  ctx.closePath();
+
+  // player 2 paddle
+  ctx.beginPath();
+  ctx.rect(canvas.width - paddleWidth, player2Y, paddleWidth, paddleHeight);
+  ctx.fillStyle = "black";
+  ctx.fill();
+  ctx.closePath();
+}
 
