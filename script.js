@@ -14,7 +14,7 @@ let ballSpeedY = 1.5;
 // set the position and size of the paddles
 let paddleHeight = 100;
 let paddleWidth = 10;
-let paddleSpeed = 30;
+let paddleSpeed = 40;
 let player1Y = (canvas.height - paddleHeight) / 2;
 let player2Y = (canvas.height - paddleHeight) / 2;
 
@@ -47,5 +47,48 @@ function drawPaddles() {
   ctx.fillStyle = "black";
   ctx.fill();
   ctx.closePath();
+}
+
+// draw the score on the canvas
+function drawScore() {
+  ctx.font = "30px Arial";
+  ctx.fillStyle = "black";
+  ctx.fillText(player1Score + " - " + player2Score, canvas.width / 2 - 40, 50);
+}
+
+// handle the key presses for moving the paddles
+function keyDownHandler(e) {
+  if (e.keyCode == 87) { // W key
+    player1Y -= paddleSpeed;
+  }
+  else if (e.keyCode == 83) { // S key
+    player1Y += paddleSpeed;
+  }
+  else if (e.keyCode == 38) { // up arrow
+    player2Y -= paddleSpeed;
+  }
+  else if (e.keyCode == 40) { // down arrow
+    player2Y += paddleSpeed;
+  }
+}
+
+// reset the position and direction of the ball
+function resetBall() {
+  ballX = canvas.width / 2;
+  ballY = canvas.height / 2;
+  ballSpeedX = -ballSpeedX;
+  ballSpeedY = Math.floor(Math.random() * 10) - 5; //returns a floating-point, pseudo-random number that's greater than or equal to 0 and less than 1, with approximately uniform distribution over that range
+}
+
+
+// update the position of the ball
+function moveBall() {
+  ballX += ballSpeedX;
+  ballY += ballSpeedY;
+
+  // check if the ball hit the top or bottom of the canvas
+  if (ballY - ballRadius < 0 || ballY + ballRadius > canvas.height) {
+    ballSpeedY = -ballSpeedY;
+  }
 }
 

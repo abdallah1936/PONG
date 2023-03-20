@@ -13,15 +13,15 @@
 
 ## MVP
 * Have the opposing post go up and down at a consitant speed
-* Have a winner box at the bottem
+* Have a winner box at the bottom
 * Have a score counter 
 * Render a ball when someone scores a point
-* Have a reset button for someone wins
+* Have a reset button for when someone wins
 
 ## Stretch Goals
 * Make levels of hardness
 * Get the balls increse in numbers
-* Find a way for two people play at the same time
+* Find a way for two people to play at the same time
 * get an impossible to beat AI
 * Have the ball move up in speed that makes sense; for example when someone gets to 4 points, have the ball going at a very fast speed
 
@@ -34,3 +34,4 @@
 * Getting the ball to render back into the game after someone scores
 * Getting the ball to go faster depanding on the score
 * Finding a way to make the ball bounce
+* collision and point scoring
