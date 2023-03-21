@@ -16,10 +16,27 @@
     </style>
   </head>
   <body>
-    <h1 align="center">PONG </h1>
+    <h1 align="center">PONG</h1>
     <canvas id="gameCanvas" width="600" height="400"></canvas>
-    <script src="./script.js"></script>
-    <div id="winner-box"></div>
+    <script defer src="./script.js"></script>
+   <p align="center"><strong>Instructions</strong></p>
+
+   <div>
+    <button onclick="incrementScore(1)">Player 1 Score</button>
+    <span id="player1Score">0</span>
+  </div>
+  
+  <div>
+    <button onclick="incrementScore(2)">Player 2 Score</button>
+    <span id="player2Score">0</span>
+  </div>
+  
+  <div id="winnerBox" style="display: none">
+    <p>Winner:</p>
+    <p id="winnerName"></p>
+  </div>
+  
+  <button onclick="resetGame()">Reset Game</button>
 
   </body>
 </html>

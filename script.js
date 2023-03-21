@@ -39,14 +39,14 @@ function drawPaddles() {
   // player 1 paddle
   ctx.beginPath();
   ctx.rect(0, player1Y, paddleWidth, paddleHeight);
-  ctx.fillStyle = "green";
+  ctx.fillStyle = "white";
   ctx.fill();
   ctx.closePath();
 
   // player 2 paddle
   ctx.beginPath();
   ctx.rect(canvas.width - paddleWidth, player2Y, paddleWidth, paddleHeight);
-  ctx.fillStyle = "green";
+  ctx.fillStyle = "white";
   ctx.fill();
   ctx.closePath();
 }
@@ -81,14 +81,20 @@ function resetBall() {
   ballSpeedX = -ballSpeedX;
   ballSpeedY = Math.floor(Math.random() * 10) -1; //returns a floating-point, pseudo-random number that's greater than or equal to 0 and less than 1, with approximately uniform distribution over that range
 }
+function displayWinner(winner) {
+    ctx.font = "30px Arial";
+    ctx.fillStyle = "red";
+    ctx.fillText(winner + " wins!", canvas.width / 2 - 50, canvas.height - 50);
+    console.log(winner)
+  }
 
 function checkScore() {
     // check if either player has won the game
     if (player1Score >= winningScore) {
-      winner = "Player 1";
+      winner = ("Player 1");
       clearInterval(gameLoop); // stop the game loop
     } else if (player2Score >= winningScore) {
-      winner = "Player 2";
+      winner = ("Player 2");
       clearInterval(gameLoop); // stop the game loop
     }
   }
@@ -135,6 +141,42 @@ let gameLoop = setInterval(draw, 10);
       resetBall();
     }
   }
+
+function incrementScore(player) {
+  if (player === 1) {
+    player1Score++;
+    document.getElementById("player1Score").textContent = player1Score;
+    if (player1Score === 6) {
+      endGame("Player 1");
+    }
+  } else {
+    player2Score++;
+    document.getElementById("player2Score").textContent = player2Score;
+    if (player2Score === 6) {
+      endGame("Player 2");
+    }
+  }
+}
+
+function endGame(winner) {
+  document.getElementById("winnerName").textContent = winner;
+  document.getElementById("winnerBox").style.display = "block";
+  document.querySelectorAll("button").forEach((button) => {
+    button.disabled = true;
+  });
+}
+
+function resetGame() {
+  player1Score = 0;
+  player2Score = 0;
+  document.getElementById("player1Score").textContent = player1Score;
+  document.getElementById("player2Score").textContent = player2Score;
+  document.getElementById("winnerBox").style.display = "none";
+  document.querySelectorAll("button").forEach((button) => {
+    button.disabled = false;
+  });
+}
+
 
 // draw the game on the canvas
 function draw() {
