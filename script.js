@@ -7,7 +7,7 @@ let ballX = canvas.width / 4;
 let ballY = canvas.height / 4;
 let ballRadius = 10;
 
-// set the speed and direction of the ball
+// set the speed and starting direction of the ball
 let ballSpeedX = 1;
 let ballSpeedY = 1;
 
@@ -85,7 +85,6 @@ function displayWinner(winner) {
     ctx.font = "30px Arial";
     ctx.fillStyle = "red";
     ctx.fillText(winner + " wins!", canvas.width / 2 - 50, canvas.height - 50);
-    console.log(winner)
   }
 
 function checkScore() {
@@ -162,7 +161,7 @@ function endGame(winner) {
   document.getElementById("winnerName").textContent = winner;
   document.getElementById("winnerBox").style.display = "block";
   document.querySelectorAll("button").forEach((button) => {
-    button.disabled = true;
+    button.disabled = false;
   });
 }
 
@@ -182,7 +181,6 @@ function resetGame() {
 function draw() {
   // clear the canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-
   // draw the ball, paddles, and score
   drawBall();
   drawPaddles();
@@ -210,8 +208,18 @@ document.addEventListener("keydown", keyDownHandler, false);
 
 
 // sorces 
+
+
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI
+
+
 // https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/closePath
+
+
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+
+
 // https://blog.thejaytray.com/canvas-game-tutorial-pong/
+
+
 // https://www.tutorialspoint.com/How-to-set-Heading-alignment-in-HTML#:~:text=To%20set%20the%20heading%20alignment,setting%20alignment%20for%20an%20element.
