@@ -24,15 +24,11 @@ let player1Score = 0;
 let player2Score = 0;
 let winningScore = 6;
 let players = ["Player 1", "Player 2"]
-var gameOver = false
+let gameOver = false
 
   // set the game loop
-var gameLoop = setInterval(draw, 10);
-  
-  
+let gameLoop = setInterval(draw, 10);
 
-// set the game loop
-// timer = setInterval(draw, 50);
 
 // listen for key presses to move the paddles
 document.addEventListener("keydown", keyDownHandler, false);

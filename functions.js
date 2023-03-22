@@ -140,7 +140,7 @@ function incrementScore(player) {
 }
 
 function endGame(winner) {
-  document.getElementById("winnerName").textContent = players[winner-1];
+  document.getElementById("winnerName").textContent = players[winner -= 1];
   document.getElementById("winnerBox").style.display = "block";
   document.querySelectorAll("button").forEach((button) => {
     button.disabled = false;
@@ -161,7 +161,7 @@ function resetGame() {
   document.querySelectorAll("button").forEach((button) => {
     button.disabled = false;
   });
-  gameLoop = setInterval(draw, 10);
+gameLoop = setInterval(draw, 10);
 }
 
 
