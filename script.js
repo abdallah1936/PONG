@@ -42,7 +42,7 @@ document.addEventListener("keydown", keyDownHandler, false);
 
 
 
-// sorces 
+// sorces:
 
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI
@@ -58,3 +58,5 @@ document.addEventListener("keydown", keyDownHandler, false);
 
 
 // https://www.tutorialspoint.com/How-to-set-Heading-alignment-in-HTML#:~:text=To%20set%20the%20heading%20alignment,setting%20alignment%20for%20an%20element.
+
+//https:developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch

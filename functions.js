@@ -32,6 +32,7 @@ function drawScore() {
 }
 
 // handle the key presses for moving the paddles
+// I looked up a diffrant way to make the  code look a little bit cleaner and easier to read
 function keyDownHandler(e) {
     switch(e.keyCode){
      case 87:  // W key
@@ -70,14 +71,15 @@ function resetBall() {
   ballSpeedX = -ballSpeedX;
   ballSpeedY = Math.floor(Math.random() * 10) -1; //returns a floating-point, pseudo-random number that's greater than or equal to 0 and less than 1, with approximately uniform distribution over that range
 }
+// a message the displayes after someone wins
 function displayWinner(winner) {
     ctx.font = "30px Arial";
     ctx.fillStyle = "red";
     ctx.fillText(players[winner] + " wins!", canvas.width / 2 - 50, canvas.height - 50);
   }
 
+// check if either player has won the game
 function checkScore() {
-    // check if either player has won the game
     if (player1Score >= winningScore) {
       winner = "Player 1";
     } else if (player2Score >= winningScore) {
@@ -123,7 +125,7 @@ function moveBall() {
       resetBall();
     }
 }
-
+// every time someone score's it goes up by one as long as the game is not over
 function incrementScore(player) {
   if(!gameOver){
     if (player === 1) {
@@ -138,7 +140,7 @@ function incrementScore(player) {
     }
   }
 }
-
+// end the game after someone reaches 6 points and displating the message
 function endGame(winner) {
   document.getElementById("winnerName").textContent = players[winner -= 1];
   document.getElementById("winnerBox").style.display = "block";
@@ -150,7 +152,7 @@ function endGame(winner) {
   clearInterval(gameLoop);
   gameOver = true
 }
-
+// reseting the game to its orignal state so another game could be played
 function resetGame() {
     gameOver = false
   player1Score = 0;
