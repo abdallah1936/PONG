@@ -8,6 +8,8 @@
 
 #### if the ball goes off screen it's a point for the other player. First to __FIVE__ points wins the game. 
 
+## Link to Project 1
+https://abdallah1936.github.io/project-1/
 
 ![WireFrame](./wireframe.png)
 
@@ -29,6 +31,7 @@
 * Html/CSS
 * JavaScript
 * HTML5 Canvas
+
 ## potential Roadblocks
 * Finding a way to end the game after the score reaches 6
 * Getting the ball to render back into the game after someone scores
