@@ -182,4 +182,3 @@ function draw() {
   // update the position of the ball and paddles
   moveBall();
 }
-
