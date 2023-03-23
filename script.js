@@ -32,31 +32,3 @@ let gameLoop = setInterval(draw, 10);
 
 // listen for key presses to move the paddles
 document.addEventListener("keydown", keyDownHandler, false);
-
-
-
-
-
-
-
-
-
-
-// sorces:
-
-
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI
-
-
-// https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/closePath
-
-
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-
-
-// https://blog.thejaytray.com/canvas-game-tutorial-pong/
-
-
-// https://www.tutorialspoint.com/How-to-set-Heading-alignment-in-HTML#:~:text=To%20set%20the%20heading%20alignment,setting%20alignment%20for%20an%20element.
-
-//https:developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch

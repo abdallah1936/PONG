@@ -92,6 +92,7 @@ function moveBall() {
     ballX += ballSpeedX;
     ballY += ballSpeedY;
   
+    //collistion detection
     // check if the ball hit the top or bottom of the canvas
     if (ballY - ballRadius < 0 || ballY + ballRadius > canvas.height) {
       ballSpeedY = -ballSpeedY;
@@ -130,10 +131,10 @@ function incrementScore(player) {
   if(!gameOver){
     if (player === 1) {
         player1Score++;
-        document.getElementById("player1Score").textContent = player1Score;
+        document.getElementById("player1Score").textContent = player1Score; // testing
     } else {
         player2Score++;
-        document.getElementById("player2Score").textContent = player2Score;
+        document.getElementById("player2Score").textContent = player2Score; // testing
     }
     if (player1Score >= winningScore || player2Score >= winningScore) {
       endGame(player);

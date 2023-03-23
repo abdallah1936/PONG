@@ -21,27 +21,28 @@
     <script defer src="./functions.js"></script>
     <script defer src="./script.js"></script>
    <p align="center"><strong>Instructions</strong></p>
-   <p align="center">Player 1: use the UP ⬆️ and DOWN ⬇️ key to move the post up and down</p>
-    <p align="center">Player 2: use the W and S key to move the post up and down </p>
+   <p align="center">Player 1: use the W ⬆️ and S ⬇️ key to move the post up and down</p>
+    <p align="center">Player 2: use the UP ⬆️ and DOWN ⬇️ to move the post up and down </p>
 
-   <div>
-    <button onclick="incrementScore(1)">Player 1 Score</button>
-    <span id="player1Score">0</span>
+   <div align="center">
+    <button onclick="incrementScore(1)">Player 1 Score</button>  <!--for testing-->
+    <span id="player1Score"></span>
   </div>
   
-  <div>
-    <button onclick="incrementScore(2)">Player 2 Score</button>
-    <span id="player2Score">0</span>
+  <div align="center">
+    <button onclick="incrementScore(2)">Player 2 Score</button> <!--for testing-->
+    <span id="player2Score"></span>
   </div>
-  
+<div align="center">
   <div id="winnerBox" style="display: none">
     <p>Winner:</p> 
     <p id="winnerName"></p>
   </div>
-  
+</div>
+  <div align="center">
   <button onclick="resetGame()">Reset Game</button>
-
+  </div>
   </body>
 </html>
 
-<!-- kept getting bugs when I had a difrant css so i chose to add the css code in js and HTML -->
+<!-- kept getting bugs when I had a diffrant css file so i choose to add the css code in js and HTML -->
