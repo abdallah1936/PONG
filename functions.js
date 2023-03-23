@@ -117,7 +117,7 @@ function moveBall() {
       ballSpeedY = deltaY * 0.35;
     }
   
-    // check if the ball went out of bounds and update score
+    // check if the ball went out of bounds and update thew score
     if (ballX - ballRadius < 0) {
       incrementScore(2)
       resetBall();
@@ -131,10 +131,10 @@ function incrementScore(player) {
   if(!gameOver){
     if (player === 1) {
         player1Score++;
-        document.getElementById("player1Score").textContent = player1Score; // testing
+        // document.getElementById("player1Score").textContent = player1Score; // testing
     } else {
         player2Score++;
-        document.getElementById("player2Score").textContent = player2Score; // testing
+        // document.getElementById("player2Score").textContent = player2Score; // testing
     }
     if (player1Score >= winningScore || player2Score >= winningScore) {
       endGame(player);
@@ -158,27 +158,26 @@ function resetGame() {
     gameOver = false
   player1Score = 0;
   player2Score = 0;
-  document.getElementById("player1Score").textContent = player1Score;
-  document.getElementById("player2Score").textContent = player2Score;
+  // document.getElementById("player1Score").textContent = player1Score;
+  // document.getElementById("player2Score").textContent = player2Score;
   document.getElementById("winnerBox").style.display = "none";
   document.querySelectorAll("button").forEach((button) => {
-    button.disabled = false;
+    button.disabled = true;
   });
 gameLoop = setInterval(draw, 10);
 }
 
-
-// draw the game on the canvas
-function draw() {
+  // draw the game on the canvas
+  function draw() {
+  
   // clear the canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
   // draw the ball, paddles, and score
   drawBall();
   drawPaddles();
   drawScore();
   
-  
-
   // update the position of the ball and paddles
   moveBall();
 }

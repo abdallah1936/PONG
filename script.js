@@ -8,8 +8,8 @@ let ballY = canvas.height / 4;
 let ballRadius = 10;
 
 // set the speed and starting direction of the ball
-let ballSpeedX = 1;
-let ballSpeedY = 1;
+let ballSpeedX = .7;
+let ballSpeedY = .7;
 
 // set the position and size of the paddles
 let paddleHeight = 150;
