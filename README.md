@@ -9,7 +9,7 @@
 #### if the ball goes off screen it's a point for the other player. First to __FIVE__ points wins the game. 
 
 ## Link to Project 1
-https://abdallah1936.github.io/project-1/
+#### https://abdallah1936.github.io/project-1/
 
 
 ## WireFrame
@@ -50,18 +50,18 @@ https://abdallah1936.github.io/project-1/
 
 ## sorces:
 
-#### // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI
+####  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI
 
 
-#### // https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/closePath
+####  https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/closePath
 
 
-#### // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+####  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 
 
-#### // https://blog.thejaytray.com/canvas-game-tutorial-pong/
+####  https://blog.thejaytray.com/canvas-game-tutorial-pong/
 
 
-#### // https://www.tutorialspoint.com/How-to-set-Heading-alignment-in-HTML#:~:text=To%20set%20the%20heading%20alignment,setting%20alignment%20for%20an%20element.
+####  https://www.tutorialspoint.com/How-to-set-Heading-alignment-in-HTML#:~:text=To%20set%20the%20heading%20alignment,setting%20alignment%20for%20an%20element.
 
-#### //https:developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
+#### https:developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
