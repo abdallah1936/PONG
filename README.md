@@ -15,6 +15,9 @@ https://abdallah1936.github.io/project-1/
 ## WireFrame
 ![WireFrame](./wireframe.png)
 
+## My Approach
+#### I started by laying out what I want the game to do first. And then I started to write the code and seeing if it worked live on the web. After I was about halfway done with the game, I figured that I had over two hundred lines of code, which made it hard to navigate when I was debugging. I then created a another folder for functions. Doing so made reading the code and navigating so much easier. 
+
 ## MVP
 * Have a winner box at the bottom
 * Have a score counter 
@@ -40,3 +43,25 @@ https://abdallah1936.github.io/project-1/
 * Getting the ball to go faster depanding on the score
 * Finding a way to make the ball bounce
 * collision and point scoring
+
+## Post-Project Reflection and unsolved probloms or growth areas
+#### This project was a lot more challenging than I anticipated. I thought that it would be easier to have the post go up and down on a set timer. I also would have loved to make levels that could increse speed of either the ball or make the post slower. The thing I regret the most is not having an AI to beat. Hopefully I will do it sometime in the future.
+
+
+## sorces:
+
+#### // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI
+
+
+#### // https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/closePath
+
+
+#### // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+
+
+#### // https://blog.thejaytray.com/canvas-game-tutorial-pong/
+
+
+#### // https://www.tutorialspoint.com/How-to-set-Heading-alignment-in-HTML#:~:text=To%20set%20the%20heading%20alignment,setting%20alignment%20for%20an%20element.
+
+#### //https:developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
